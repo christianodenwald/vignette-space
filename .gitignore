@@ -6,3 +6,4 @@ venv/
 .env
 .vscode/
 .idea/
+causality_checker/

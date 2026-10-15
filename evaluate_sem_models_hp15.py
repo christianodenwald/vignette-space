@@ -4,6 +4,7 @@ For every model and every binary context (A, B), this evaluates:
 
     A=a is a cause of C=c
     B=b is a cause of C=c
+    A=a and B=b is a conjunctive cause of C=c
 
 where ``a``, ``b``, and ``c`` are the values in that context.
 """
@@ -73,12 +74,17 @@ def _evaluate_rows(input_path: Path) -> Iterable[Dict[str, object]]:
                 for b in (0, 1):
                     vignette = _make_vignette(model_id, expression, a, b)
                     c = vignette.values_in_example["C"]
-                    for cause_variable, cause_value in (("A", a), ("B", b)):
+                    candidate_causes = [
+                        (f"A={a}", "primitive"),
+                        (f"B={b}", "primitive"),
+                        (f"A={a} and B={b}", "conjunction"),
+                    ]
+                    for cause, cause_type in candidate_causes:
                         query = Query(
                             v_id=model_id,
-                            cause=f"{cause_variable}={cause_value}",
+                            cause=cause,
                             effect=f"C={c}",
-                            query_id=f"{model_id}_{a}{b}_{cause_variable}",
+                            query_id=f"{model_id}_{a}{b}_{cause_type}",
                         )
                         result = check_causality(
                             theory="HP2015",
@@ -95,6 +101,7 @@ def _evaluate_rows(input_path: Path) -> Iterable[Dict[str, object]]:
                             "A": a,
                             "B": b,
                             "C": c,
+                            "cause_type": cause_type,
                             "cause": query.cause,
                             "effect": query.effect,
                             "hp15_result": result.result,
