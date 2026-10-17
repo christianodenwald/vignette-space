@@ -10,7 +10,7 @@ from typing import Dict, List
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent
-DEFAULT_RESULTS_PATH = PROJECT_ROOT / "sem_models_hp15_results.csv"
+DEFAULT_RESULTS_PATH = PROJECT_ROOT / "results" / "hp15_results.csv"
 COMPARISON_COLUMNS = ("A", "B", "C", "cause", "effect")
 
 

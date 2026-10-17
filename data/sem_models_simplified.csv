@@ -1,0 +1,10 @@
+id,representation,truth_table,C
+4,alternative_1,1 1 0 0,~A
+6,alternative_1,1 0 1 0,~B
+8,alternative_1,1 1 1 0,~A | ~B
+11,alternative_1,0 1 0 1,B
+12,alternative_1,1 1 0 1,B | ~A
+13,alternative_1,0 0 1 1,A
+14,alternative_1,1 0 1 1,A | ~B
+15,alternative_1,0 1 1 1,A | B
+16,alternative_1,1 1 1 1,True

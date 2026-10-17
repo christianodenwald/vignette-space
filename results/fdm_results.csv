@@ -1,0 +1,985 @@
+model_id,query_id,logical_model_id,representation,truth_table,equation,A,B,C,cause_type,cause,effect,hp15_result,witness,details
+1_canonical,1_canonical|0|0|A,1,canonical,0 0 0 0,False,0,0,0,primitive,A=0,C=0,False,,
+1_canonical,1_canonical|0|0|B,1,canonical,0 0 0 0,False,0,0,0,primitive,B=0,C=0,False,,
+1_canonical,1_canonical|0|1|A,1,canonical,0 0 0 0,False,0,1,0,primitive,A=0,C=0,False,,
+1_canonical,1_canonical|0|1|B,1,canonical,0 0 0 0,False,0,1,0,primitive,B=1,C=0,False,,
+1_canonical,1_canonical|1|0|A,1,canonical,0 0 0 0,False,1,0,0,primitive,A=1,C=0,False,,
+1_canonical,1_canonical|1|0|B,1,canonical,0 0 0 0,False,1,0,0,primitive,B=0,C=0,False,,
+1_canonical,1_canonical|1|1|A,1,canonical,0 0 0 0,False,1,1,0,primitive,A=1,C=0,False,,
+1_canonical,1_canonical|1|1|B,1,canonical,0 0 0 0,False,1,1,0,primitive,B=1,C=0,False,,
+2_canonical,2_canonical|0|0|A,2,canonical,1 0 0 0,~A & ~B,0,0,1,primitive,A=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND (NOT A) (NOT B))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006564263}>
+2_canonical,2_canonical|0|0|B,2,canonical,1 0 0 0,~A & ~B,0,0,1,primitive,B=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND (NOT A) (NOT B))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006626BC3}>
+2_canonical,2_canonical|0|1|A,2,canonical,1 0 0 0,~A & ~B,0,1,0,primitive,A=0,C=0,False,,
+2_canonical,2_canonical|0|1|B,2,canonical,1 0 0 0,~A & ~B,0,1,0,primitive,B=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND (NOT A) (NOT B))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8006673073}>
+2_canonical,2_canonical|1|0|A,2,canonical,1 0 0 0,~A & ~B,1,0,0,primitive,A=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND (NOT A) (NOT B))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {800667F413}>
+2_canonical,2_canonical|1|0|B,2,canonical,1 0 0 0,~A & ~B,1,0,0,primitive,B=0,C=0,False,,
+2_canonical,2_canonical|1|1|A,2,canonical,1 0 0 0,~A & ~B,1,1,0,primitive,A=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND (NOT A) (NOT B))
+  V (literals):
+    
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {80066AF973}>
+2_canonical,2_canonical|1|1|B,2,canonical,1 0 0 0,~A & ~B,1,1,0,primitive,B=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND (NOT A) (NOT B))
+  V (literals):
+    
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {80066E3783}>
+3_canonical,3_canonical|0|0|A,3,canonical,0 1 0 0,B & ~A,0,0,0,primitive,A=0,C=0,False,,
+3_canonical,3_canonical|0|0|B,3,canonical,0 1 0 0,B & ~A,0,0,0,primitive,B=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND B (NOT A))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {80067244B3}>
+3_canonical,3_canonical|0|1|A,3,canonical,0 1 0 0,B & ~A,0,1,1,primitive,A=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND B (NOT A))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006740143}>
+3_canonical,3_canonical|0|1|B,3,canonical,0 1 0 0,B & ~A,0,1,1,primitive,B=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND B (NOT A))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {800674B7C3}>
+3_canonical,3_canonical|1|0|A,3,canonical,0 1 0 0,B & ~A,1,0,0,primitive,A=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND B (NOT A))
+  V (literals):
+    
+  N (defaults):
+    lit<¬A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {800675C0C3}>
+3_canonical,3_canonical|1|0|B,3,canonical,0 1 0 0,B & ~A,1,0,0,primitive,B=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND B (NOT A))
+  V (literals):
+    
+  N (defaults):
+    lit<¬A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {80067A0553}>
+3_canonical,3_canonical|1|1|A,3,canonical,0 1 0 0,B & ~A,1,1,0,primitive,A=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND B (NOT A))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {80067AFD03}>
+3_canonical,3_canonical|1|1|B,3,canonical,0 1 0 0,B & ~A,1,1,0,primitive,B=1,C=0,False,,
+4_canonical,4_canonical|0|0|A,4,canonical,1 1 0 0,(B & ~A) | (~A & ~B),0,0,1,primitive,A=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND B (NOT A)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {80067F0833}>
+4_canonical,4_canonical|0|0|B,4,canonical,1 1 0 0,(B & ~A) | (~A & ~B),0,0,1,primitive,B=0,C=1,False,,
+4_canonical,4_canonical|0|1|A,4,canonical,1 1 0 0,(B & ~A) | (~A & ~B),0,1,1,primitive,A=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND B (NOT A)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006847003}>
+4_canonical,4_canonical|0|1|B,4,canonical,1 1 0 0,(B & ~A) | (~A & ~B),0,1,1,primitive,B=1,C=1,False,,
+4_canonical,4_canonical|1|0|A,4,canonical,1 1 0 0,(B & ~A) | (~A & ~B),1,0,0,primitive,A=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND B (NOT A)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {800688D833}>
+4_canonical,4_canonical|1|0|B,4,canonical,1 1 0 0,(B & ~A) | (~A & ~B),1,0,0,primitive,B=0,C=0,False,,
+4_canonical,4_canonical|1|1|A,4,canonical,1 1 0 0,(B & ~A) | (~A & ~B),1,1,0,primitive,A=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND B (NOT A)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {80068D3F83}>
+4_canonical,4_canonical|1|1|B,4,canonical,1 1 0 0,(B & ~A) | (~A & ~B),1,1,0,primitive,B=1,C=0,False,,
+5_canonical,5_canonical|0|0|A,5,canonical,0 0 1 0,A & ~B,0,0,0,primitive,A=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND A (NOT B))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8006916913}>
+5_canonical,5_canonical|0|0|B,5,canonical,0 0 1 0,A & ~B,0,0,0,primitive,B=0,C=0,False,,
+5_canonical,5_canonical|0|1|A,5,canonical,0 0 1 0,A & ~B,0,1,0,primitive,A=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND A (NOT B))
+  V (literals):
+    
+  N (defaults):
+    lit<A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8006957D83}>
+5_canonical,5_canonical|0|1|B,5,canonical,0 0 1 0,A & ~B,0,1,0,primitive,B=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND A (NOT B))
+  V (literals):
+    
+  N (defaults):
+    lit<A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {800696C223}>
+5_canonical,5_canonical|1|0|A,5,canonical,0 0 1 0,A & ~B,1,0,1,primitive,A=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND A (NOT B))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {80069ABED3}>
+5_canonical,5_canonical|1|0|B,5,canonical,0 0 1 0,A & ~B,1,0,1,primitive,B=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND A (NOT B))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {80069C72E3}>
+5_canonical,5_canonical|1|1|A,5,canonical,0 0 1 0,A & ~B,1,1,0,primitive,A=1,C=0,False,,
+5_canonical,5_canonical|1|1|B,5,canonical,0 0 1 0,A & ~B,1,1,0,primitive,B=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND A (NOT B))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8006A026E3}>
+6_canonical,6_canonical|0|0|A,6,canonical,1 0 1 0,(A & ~B) | (~A & ~B),0,0,1,primitive,A=0,C=1,False,,
+6_canonical,6_canonical|0|0|B,6,canonical,1 0 1 0,(A & ~B) | (~A & ~B),0,0,1,primitive,B=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006A38853}>
+6_canonical,6_canonical|0|1|A,6,canonical,1 0 1 0,(A & ~B) | (~A & ~B),0,1,0,primitive,A=0,C=0,False,,
+6_canonical,6_canonical|0|1|B,6,canonical,1 0 1 0,(A & ~B) | (~A & ~B),0,1,0,primitive,B=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8006A7EC13}>
+6_canonical,6_canonical|1|0|A,6,canonical,1 0 1 0,(A & ~B) | (~A & ~B),1,0,1,primitive,A=1,C=1,False,,
+6_canonical,6_canonical|1|0|B,6,canonical,1 0 1 0,(A & ~B) | (~A & ~B),1,0,1,primitive,B=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006AD4103}>
+6_canonical,6_canonical|1|1|A,6,canonical,1 0 1 0,(A & ~B) | (~A & ~B),1,1,0,primitive,A=1,C=0,False,,
+6_canonical,6_canonical|1|1|B,6,canonical,1 0 1 0,(A & ~B) | (~A & ~B),1,1,0,primitive,B=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8006B09663}>
+7_canonical,7_canonical|0|0|A,7,canonical,0 1 1 0,(A & ~B) | (B & ~A),0,0,0,primitive,A=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND B (NOT A)))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8006B3A993}>
+7_canonical,7_canonical|0|0|B,7,canonical,0 1 1 0,(A & ~B) | (B & ~A),0,0,0,primitive,B=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND B (NOT A)))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8006B5AF13}>
+7_canonical,7_canonical|0|1|A,7,canonical,0 1 1 0,(A & ~B) | (B & ~A),0,1,1,primitive,A=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND B (NOT A)))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006B7B3B3}>
+7_canonical,7_canonical|0|1|B,7,canonical,0 1 1 0,(A & ~B) | (B & ~A),0,1,1,primitive,B=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND B (NOT A)))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006B9AF93}>
+7_canonical,7_canonical|1|0|A,7,canonical,0 1 1 0,(A & ~B) | (B & ~A),1,0,1,primitive,A=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND B (NOT A)))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006BBB6C3}>
+7_canonical,7_canonical|1|0|B,7,canonical,0 1 1 0,(A & ~B) | (B & ~A),1,0,1,primitive,B=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND B (NOT A)))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006BDB023}>
+7_canonical,7_canonical|1|1|A,7,canonical,0 1 1 0,(A & ~B) | (B & ~A),1,1,0,primitive,A=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND B (NOT A)))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8006BFB473}>
+7_canonical,7_canonical|1|1|B,7,canonical,0 1 1 0,(A & ~B) | (B & ~A),1,1,0,primitive,B=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND B (NOT A)))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8006C1AE13}>
+8_canonical,8_canonical|0|0|A,8,canonical,1 1 1 0,(A & ~B) | (B & ~A) | (~A & ~B),0,0,1,primitive,A=0,C=1,False,,
+8_canonical,8_canonical|0|0|B,8,canonical,1 1 1 0,(A & ~B) | (B & ~A) | (~A & ~B),0,0,1,primitive,B=0,C=1,False,,
+8_canonical,8_canonical|0|1|A,8,canonical,1 1 1 0,(A & ~B) | (B & ~A) | (~A & ~B),0,1,1,primitive,A=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND B (NOT A)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006CA4243}>
+8_canonical,8_canonical|0|1|B,8,canonical,1 1 1 0,(A & ~B) | (B & ~A) | (~A & ~B),0,1,1,primitive,B=1,C=1,False,,
+8_canonical,8_canonical|1|0|A,8,canonical,1 1 1 0,(A & ~B) | (B & ~A) | (~A & ~B),1,0,1,primitive,A=1,C=1,False,,
+8_canonical,8_canonical|1|0|B,8,canonical,1 1 1 0,(A & ~B) | (B & ~A) | (~A & ~B),1,0,1,primitive,B=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND B (NOT A)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006D1B8D3}>
+8_canonical,8_canonical|1|1|A,8,canonical,1 1 1 0,(A & ~B) | (B & ~A) | (~A & ~B),1,1,0,primitive,A=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND B (NOT A)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8006D3F783}>
+8_canonical,8_canonical|1|1|B,8,canonical,1 1 1 0,(A & ~B) | (B & ~A) | (~A & ~B),1,1,0,primitive,B=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A (NOT B)) (AND B (NOT A)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8006D62933}>
+9_canonical,9_canonical|0|0|A,9,canonical,0 0 0 1,A & B,0,0,0,primitive,A=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND A B)
+  V (literals):
+    
+  N (defaults):
+    lit<A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8006D93E63}>
+9_canonical,9_canonical|0|0|B,9,canonical,0 0 0 1,A & B,0,0,0,primitive,B=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND A B)
+  V (literals):
+    
+  N (defaults):
+    lit<A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8006DA8993}>
+9_canonical,9_canonical|0|1|A,9,canonical,0 0 0 1,A & B,0,1,0,primitive,A=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND A B)
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8006DD87A3}>
+9_canonical,9_canonical|0|1|B,9,canonical,0 0 0 1,A & B,0,1,0,primitive,B=1,C=0,False,,
+9_canonical,9_canonical|1|0|A,9,canonical,0 0 0 1,A & B,1,0,0,primitive,A=1,C=0,False,,
+9_canonical,9_canonical|1|0|B,9,canonical,0 0 0 1,A & B,1,0,0,primitive,B=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND A B)
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8006E35093}>
+9_canonical,9_canonical|1|1|A,9,canonical,0 0 0 1,A & B,1,1,1,primitive,A=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND A B)
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006E60713}>
+9_canonical,9_canonical|1|1|B,9,canonical,0 0 0 1,A & B,1,1,1,primitive,B=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (AND A B)
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006E6B663}>
+10_canonical,10_canonical|0|0|A,10,canonical,1 0 0 1,(A & B) | (~A & ~B),0,0,1,primitive,A=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006E7C1A3}>
+10_canonical,10_canonical|0|0|B,10,canonical,1 0 0 1,(A & B) | (~A & ~B),0,0,1,primitive,B=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006E9C223}>
+10_canonical,10_canonical|0|1|A,10,canonical,1 0 0 1,(A & B) | (~A & ~B),0,1,0,primitive,A=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8006ECCC83}>
+10_canonical,10_canonical|0|1|B,10,canonical,1 0 0 1,(A & B) | (~A & ~B),0,1,0,primitive,B=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8006EDCD53}>
+10_canonical,10_canonical|1|0|A,10,canonical,1 0 0 1,(A & B) | (~A & ~B),1,0,0,primitive,A=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8006EFD993}>
+10_canonical,10_canonical|1|0|B,10,canonical,1 0 0 1,(A & B) | (~A & ~B),1,0,0,primitive,B=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8006F2D7E3}>
+10_canonical,10_canonical|1|1|A,10,canonical,1 0 0 1,(A & B) | (~A & ~B),1,1,1,primitive,A=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006F3D6A3}>
+10_canonical,10_canonical|1|1|B,10,canonical,1 0 0 1,(A & B) | (~A & ~B),1,1,1,primitive,B=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006F5CB33}>
+11_canonical,11_canonical|0|0|A,11,canonical,0 1 0 1,(A & B) | (B & ~A),0,0,0,primitive,A=0,C=0,False,,
+11_canonical,11_canonical|0|0|B,11,canonical,0 1 0 1,(A & B) | (B & ~A),0,0,0,primitive,B=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND B (NOT A)))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8006FB3E73}>
+11_canonical,11_canonical|0|1|A,11,canonical,0 1 0 1,(A & B) | (B & ~A),0,1,1,primitive,A=0,C=1,False,,
+11_canonical,11_canonical|0|1|B,11,canonical,0 1 0 1,(A & B) | (B & ~A),0,1,1,primitive,B=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND B (NOT A)))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8006FF93B3}>
+11_canonical,11_canonical|1|0|A,11,canonical,0 1 0 1,(A & B) | (B & ~A),1,0,0,primitive,A=1,C=0,False,,
+11_canonical,11_canonical|1|0|B,11,canonical,0 1 0 1,(A & B) | (B & ~A),1,0,0,primitive,B=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND B (NOT A)))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {800702F733}>
+11_canonical,11_canonical|1|1|A,11,canonical,0 1 0 1,(A & B) | (B & ~A),1,1,1,primitive,A=1,C=1,False,,
+11_canonical,11_canonical|1|1|B,11,canonical,0 1 0 1,(A & B) | (B & ~A),1,1,1,primitive,B=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND B (NOT A)))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007083E23}>
+12_canonical,12_canonical|0|0|A,12,canonical,1 1 0 1,(A & B) | (B & ~A) | (~A & ~B),0,0,1,primitive,A=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND B (NOT A)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {80070A83E3}>
+12_canonical,12_canonical|0|0|B,12,canonical,1 1 0 1,(A & B) | (B & ~A) | (~A & ~B),0,0,1,primitive,B=0,C=1,False,,
+12_canonical,12_canonical|0|1|A,12,canonical,1 1 0 1,(A & B) | (B & ~A) | (~A & ~B),0,1,1,primitive,A=0,C=1,False,,
+12_canonical,12_canonical|0|1|B,12,canonical,1 1 0 1,(A & B) | (B & ~A) | (~A & ~B),0,1,1,primitive,B=1,C=1,False,,
+12_canonical,12_canonical|1|0|A,12,canonical,1 1 0 1,(A & B) | (B & ~A) | (~A & ~B),1,0,0,primitive,A=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND B (NOT A)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {800715BB03}>
+12_canonical,12_canonical|1|0|B,12,canonical,1 1 0 1,(A & B) | (B & ~A) | (~A & ~B),1,0,0,primitive,B=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND B (NOT A)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {800718F153}>
+12_canonical,12_canonical|1|1|A,12,canonical,1 1 0 1,(A & B) | (B & ~A) | (~A & ~B),1,1,1,primitive,A=1,C=1,False,,
+12_canonical,12_canonical|1|1|B,12,canonical,1 1 0 1,(A & B) | (B & ~A) | (~A & ~B),1,1,1,primitive,B=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND B (NOT A)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {80071FB6D3}>
+13_canonical,13_canonical|0|0|A,13,canonical,0 0 1 1,(A & B) | (A & ~B),0,0,0,primitive,A=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND A (NOT B)))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {800721CCA3}>
+13_canonical,13_canonical|0|0|B,13,canonical,0 0 1 1,(A & B) | (A & ~B),0,0,0,primitive,B=0,C=0,False,,
+13_canonical,13_canonical|0|1|A,13,canonical,0 0 1 1,(A & B) | (A & ~B),0,1,0,primitive,A=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND A (NOT B)))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8007264123}>
+13_canonical,13_canonical|0|1|B,13,canonical,0 0 1 1,(A & B) | (A & ~B),0,1,0,primitive,B=1,C=0,False,,
+13_canonical,13_canonical|1|0|A,13,canonical,0 0 1 1,(A & B) | (A & ~B),1,0,1,primitive,A=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND A (NOT B)))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {80072AAAE3}>
+13_canonical,13_canonical|1|0|B,13,canonical,0 0 1 1,(A & B) | (A & ~B),1,0,1,primitive,B=0,C=1,False,,
+13_canonical,13_canonical|1|1|A,13,canonical,0 0 1 1,(A & B) | (A & ~B),1,1,1,primitive,A=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND A (NOT B)))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007300453}>
+13_canonical,13_canonical|1|1|B,13,canonical,0 0 1 1,(A & B) | (A & ~B),1,1,1,primitive,B=1,C=1,False,,
+14_canonical,14_canonical|0|0|A,14,canonical,1 0 1 1,(A & B) | (A & ~B) | (~A & ~B),0,0,1,primitive,A=0,C=1,False,,
+14_canonical,14_canonical|0|0|B,14,canonical,1 0 1 1,(A & B) | (A & ~B) | (~A & ~B),0,0,1,primitive,B=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND A (NOT B)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {80073838A3}>
+14_canonical,14_canonical|0|1|A,14,canonical,1 0 1 1,(A & B) | (A & ~B) | (~A & ~B),0,1,0,primitive,A=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND A (NOT B)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {80073A7D53}>
+14_canonical,14_canonical|0|1|B,14,canonical,1 0 1 1,(A & B) | (A & ~B) | (~A & ~B),0,1,0,primitive,B=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND A (NOT B)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {80073CB623}>
+14_canonical,14_canonical|1|0|A,14,canonical,1 0 1 1,(A & B) | (A & ~B) | (~A & ~B),1,0,1,primitive,A=1,C=1,False,,
+14_canonical,14_canonical|1|0|B,14,canonical,1 0 1 1,(A & B) | (A & ~B) | (~A & ~B),1,0,1,primitive,B=0,C=1,False,,
+14_canonical,14_canonical|1|1|A,14,canonical,1 0 1 1,(A & B) | (A & ~B) | (~A & ~B),1,1,1,primitive,A=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND A (NOT B)) (AND (NOT A) (NOT B)))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007453643}>
+14_canonical,14_canonical|1|1|B,14,canonical,1 0 1 1,(A & B) | (A & ~B) | (~A & ~B),1,1,1,primitive,B=1,C=1,False,,
+15_canonical,15_canonical|0|0|A,15,canonical,0 1 1 1,(A & B) | (A & ~B) | (B & ~A),0,0,0,primitive,A=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND A (NOT B)) (AND B (NOT A)))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {80074B1E83}>
+15_canonical,15_canonical|0|0|B,15,canonical,0 1 1 1,(A & B) | (A & ~B) | (B & ~A),0,0,0,primitive,B=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND A (NOT B)) (AND B (NOT A)))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {80074C5C13}>
+15_canonical,15_canonical|0|1|A,15,canonical,0 1 1 1,(A & B) | (A & ~B) | (B & ~A),0,1,1,primitive,A=0,C=1,False,,
+15_canonical,15_canonical|0|1|B,15,canonical,0 1 1 1,(A & B) | (A & ~B) | (B & ~A),0,1,1,primitive,B=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND A (NOT B)) (AND B (NOT A)))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007522FF3}>
+15_canonical,15_canonical|1|0|A,15,canonical,0 1 1 1,(A & B) | (A & ~B) | (B & ~A),1,0,1,primitive,A=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (AND A B) (AND A (NOT B)) (AND B (NOT A)))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007547103}>
+15_canonical,15_canonical|1|0|B,15,canonical,0 1 1 1,(A & B) | (A & ~B) | (B & ~A),1,0,1,primitive,B=0,C=1,False,,
+15_canonical,15_canonical|1|1|A,15,canonical,0 1 1 1,(A & B) | (A & ~B) | (B & ~A),1,1,1,primitive,A=1,C=1,False,,
+15_canonical,15_canonical|1|1|B,15,canonical,0 1 1 1,(A & B) | (A & ~B) | (B & ~A),1,1,1,primitive,B=1,C=1,False,,
+16_canonical,16_canonical|0|0|A,16,canonical,1 1 1 1,(A & B) | (A & ~B) | (B & ~A) | (~A & ~B),0,0,1,primitive,A=0,C=1,False,,
+16_canonical,16_canonical|0|0|B,16,canonical,1 1 1 1,(A & B) | (A & ~B) | (B & ~A) | (~A & ~B),0,0,1,primitive,B=0,C=1,False,,
+16_canonical,16_canonical|0|1|A,16,canonical,1 1 1 1,(A & B) | (A & ~B) | (B & ~A) | (~A & ~B),0,1,1,primitive,A=0,C=1,False,,
+16_canonical,16_canonical|0|1|B,16,canonical,1 1 1 1,(A & B) | (A & ~B) | (B & ~A) | (~A & ~B),0,1,1,primitive,B=1,C=1,False,,
+16_canonical,16_canonical|1|0|A,16,canonical,1 1 1 1,(A & B) | (A & ~B) | (B & ~A) | (~A & ~B),1,0,1,primitive,A=1,C=1,False,,
+16_canonical,16_canonical|1|0|B,16,canonical,1 1 1 1,(A & B) | (A & ~B) | (B & ~A) | (~A & ~B),1,0,1,primitive,B=0,C=1,False,,
+16_canonical,16_canonical|1|1|A,16,canonical,1 1 1 1,(A & B) | (A & ~B) | (B & ~A) | (~A & ~B),1,1,1,primitive,A=1,C=1,False,,
+16_canonical,16_canonical|1|1|B,16,canonical,1 1 1 1,(A & B) | (A & ~B) | (B & ~A) | (~A & ~B),1,1,1,primitive,B=1,C=1,False,,
+4_alternative_1,4_alternative_1|0|0|A,4,alternative_1,1 1 0 0,~A,0,0,1,primitive,A=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (NOT A)
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {800770D833}>
+4_alternative_1,4_alternative_1|0|0|B,4,alternative_1,1 1 0 0,~A,0,0,1,primitive,B=0,C=1,False,,
+4_alternative_1,4_alternative_1|0|1|A,4,alternative_1,1 1 0 0,~A,0,1,1,primitive,A=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (NOT A)
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007743D33}>
+4_alternative_1,4_alternative_1|0|1|B,4,alternative_1,1 1 0 0,~A,0,1,1,primitive,B=1,C=1,False,,
+4_alternative_1,4_alternative_1|1|0|A,4,alternative_1,1 1 0 0,~A,1,0,0,primitive,A=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (NOT A)
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {800777A223}>
+4_alternative_1,4_alternative_1|1|0|B,4,alternative_1,1 1 0 0,~A,1,0,0,primitive,B=0,C=0,False,,
+4_alternative_1,4_alternative_1|1|1|A,4,alternative_1,1 1 0 0,~A,1,1,0,primitive,A=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (NOT A)
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {80077A05F3}>
+4_alternative_1,4_alternative_1|1|1|B,4,alternative_1,1 1 0 0,~A,1,1,0,primitive,B=1,C=0,False,,
+6_alternative_1,6_alternative_1|0|0|A,6,alternative_1,1 0 1 0,~B,0,0,1,primitive,A=0,C=1,False,,
+6_alternative_1,6_alternative_1|0|0|B,6,alternative_1,1 0 1 0,~B,0,0,1,primitive,B=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (NOT B)
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {80077E30B3}>
+6_alternative_1,6_alternative_1|0|1|A,6,alternative_1,1 0 1 0,~B,0,1,0,primitive,A=0,C=0,False,,
+6_alternative_1,6_alternative_1|0|1|B,6,alternative_1,1 0 1 0,~B,0,1,0,primitive,B=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (NOT B)
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {80077F9533}>
+6_alternative_1,6_alternative_1|1|0|A,6,alternative_1,1 0 1 0,~B,1,0,1,primitive,A=1,C=1,False,,
+6_alternative_1,6_alternative_1|1|0|B,6,alternative_1,1 0 1 0,~B,1,0,1,primitive,B=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (NOT B)
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {800782EBA3}>
+6_alternative_1,6_alternative_1|1|1|A,6,alternative_1,1 0 1 0,~B,1,1,0,primitive,A=1,C=0,False,,
+6_alternative_1,6_alternative_1|1|1|B,6,alternative_1,1 0 1 0,~B,1,1,0,primitive,B=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (NOT B)
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {80078741F3}>
+8_alternative_1,8_alternative_1|0|0|A,8,alternative_1,1 1 1 0,~A | ~B,0,0,1,primitive,A=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (NOT A) (NOT B))
+  V (literals):
+    
+  N (defaults):
+    lit<A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007894863}>
+8_alternative_1,8_alternative_1|0|0|B,8,alternative_1,1 1 1 0,~A | ~B,0,0,1,primitive,B=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (NOT A) (NOT B))
+  V (literals):
+    
+  N (defaults):
+    lit<A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {80078A8D43}>
+8_alternative_1,8_alternative_1|0|1|A,8,alternative_1,1 1 1 0,~A | ~B,0,1,1,primitive,A=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (NOT A) (NOT B))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {80078D8823}>
+8_alternative_1,8_alternative_1|0|1|B,8,alternative_1,1 1 1 0,~A | ~B,0,1,1,primitive,B=1,C=1,False,,
+8_alternative_1,8_alternative_1|1|0|A,8,alternative_1,1 1 1 0,~A | ~B,1,0,1,primitive,A=1,C=1,False,,
+8_alternative_1,8_alternative_1|1|0|B,8,alternative_1,1 1 1 0,~A | ~B,1,0,1,primitive,B=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (NOT A) (NOT B))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007923B93}>
+8_alternative_1,8_alternative_1|1|1|A,8,alternative_1,1 1 1 0,~A | ~B,1,1,0,primitive,A=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (NOT A) (NOT B))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {800792F763}>
+8_alternative_1,8_alternative_1|1|1|B,8,alternative_1,1 1 1 0,~A | ~B,1,1,0,primitive,B=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR (NOT A) (NOT B))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {800794AB83}>
+11_alternative_1,11_alternative_1|0|0|A,11,alternative_1,0 1 0 1,B,0,0,0,primitive,A=0,C=0,False,,
+11_alternative_1,11_alternative_1|0|0|B,11,alternative_1,0 1 0 1,B,0,0,0,primitive,B=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: B
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8007982063}>
+11_alternative_1,11_alternative_1|0|1|A,11,alternative_1,0 1 0 1,B,0,1,1,primitive,A=0,C=1,False,,
+11_alternative_1,11_alternative_1|0|1|B,11,alternative_1,0 1 0 1,B,0,1,1,primitive,B=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: B
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {80079A7743}>
+11_alternative_1,11_alternative_1|1|0|A,11,alternative_1,0 1 0 1,B,1,0,0,primitive,A=1,C=0,False,,
+11_alternative_1,11_alternative_1|1|0|B,11,alternative_1,0 1 0 1,B,1,0,0,primitive,B=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: B
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {80079CDB83}>
+11_alternative_1,11_alternative_1|1|1|A,11,alternative_1,0 1 0 1,B,1,1,1,primitive,A=1,C=1,False,,
+11_alternative_1,11_alternative_1|1|1|B,11,alternative_1,0 1 0 1,B,1,1,1,primitive,B=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: B
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007A02413}>
+12_alternative_1,12_alternative_1|0|0|A,12,alternative_1,1 1 0 1,B | ~A,0,0,1,primitive,A=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR B (NOT A))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007A0E8A3}>
+12_alternative_1,12_alternative_1|0|0|B,12,alternative_1,1 1 0 1,B | ~A,0,0,1,primitive,B=0,C=1,False,,
+12_alternative_1,12_alternative_1|0|1|A,12,alternative_1,1 1 0 1,B | ~A,0,1,1,primitive,A=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR B (NOT A))
+  V (literals):
+    
+  N (defaults):
+    lit<A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007A4EE13}>
+12_alternative_1,12_alternative_1|0|1|B,12,alternative_1,1 1 0 1,B | ~A,0,1,1,primitive,B=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR B (NOT A))
+  V (literals):
+    
+  N (defaults):
+    lit<A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007A82C83}>
+12_alternative_1,12_alternative_1|1|0|A,12,alternative_1,1 1 0 1,B | ~A,1,0,0,primitive,A=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR B (NOT A))
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8007AA3013}>
+12_alternative_1,12_alternative_1|1|0|B,12,alternative_1,1 1 0 1,B | ~A,1,0,0,primitive,B=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR B (NOT A))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8007AAE8C3}>
+12_alternative_1,12_alternative_1|1|1|A,12,alternative_1,1 1 0 1,B | ~A,1,1,1,primitive,A=1,C=1,False,,
+12_alternative_1,12_alternative_1|1|1|B,12,alternative_1,1 1 0 1,B | ~A,1,1,1,primitive,B=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR B (NOT A))
+  V (literals):
+    lit<A>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007AE8D53}>
+13_alternative_1,13_alternative_1|0|0|A,13,alternative_1,0 0 1 1,A,0,0,0,primitive,A=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: A
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8007AF3643}>
+13_alternative_1,13_alternative_1|0|0|B,13,alternative_1,0 0 1 1,A,0,0,0,primitive,B=0,C=0,False,,
+13_alternative_1,13_alternative_1|0|1|A,13,alternative_1,0 0 1 1,A,0,1,0,primitive,A=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: A
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8007B2A873}>
+13_alternative_1,13_alternative_1|0|1|B,13,alternative_1,0 0 1 1,A,0,1,0,primitive,B=1,C=0,False,,
+13_alternative_1,13_alternative_1|1|0|A,13,alternative_1,0 0 1 1,A,1,0,1,primitive,A=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: A
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007B610B3}>
+13_alternative_1,13_alternative_1|1|0|B,13,alternative_1,0 0 1 1,A,1,0,1,primitive,B=0,C=1,False,,
+13_alternative_1,13_alternative_1|1|1|A,13,alternative_1,0 0 1 1,A,1,1,1,primitive,A=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: A
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007B96743}>
+13_alternative_1,13_alternative_1|1|1|B,13,alternative_1,0 0 1 1,A,1,1,1,primitive,B=1,C=1,False,,
+14_alternative_1,14_alternative_1|0|0|A,14,alternative_1,1 0 1 1,A | ~B,0,0,1,primitive,A=0,C=1,False,,
+14_alternative_1,14_alternative_1|0|0|B,14,alternative_1,1 0 1 1,A | ~B,0,0,1,primitive,B=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR A (NOT B))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007BCE633}>
+14_alternative_1,14_alternative_1|0|1|A,14,alternative_1,1 0 1 1,A | ~B,0,1,0,primitive,A=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR A (NOT B))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8007BFA833}>
+14_alternative_1,14_alternative_1|0|1|B,14,alternative_1,1 0 1 1,A | ~B,0,1,0,primitive,B=1,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR A (NOT B))
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<C>",#<INFERENTIAL-NETWORK {8007C06363}>
+14_alternative_1,14_alternative_1|1|0|A,14,alternative_1,1 0 1 1,A | ~B,1,0,1,primitive,A=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR A (NOT B))
+  V (literals):
+    
+  N (defaults):
+    lit<¬A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007C26443}>
+14_alternative_1,14_alternative_1|1|0|B,14,alternative_1,1 0 1 1,A | ~B,1,0,1,primitive,B=0,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR A (NOT B))
+  V (literals):
+    
+  N (defaults):
+    lit<¬A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007C4A293}>
+14_alternative_1,14_alternative_1|1|1|A,14,alternative_1,1 0 1 1,A | ~B,1,1,1,primitive,A=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR A (NOT B))
+  V (literals):
+    lit<B>
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007C69723}>
+14_alternative_1,14_alternative_1|1|1|B,14,alternative_1,1 0 1 1,A | ~B,1,1,1,primitive,B=1,C=1,False,,
+15_alternative_1,15_alternative_1|0|0|A,15,alternative_1,0 1 1 1,A | B,0,0,0,primitive,A=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR A B)
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8007CA5863}>
+15_alternative_1,15_alternative_1|0|0|B,15,alternative_1,0 1 1 1,A | B,0,0,0,primitive,B=0,C=0,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR A B)
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<B>, lit<C>",#<INFERENTIAL-NETWORK {8007CC1863}>
+15_alternative_1,15_alternative_1|0|1|A,15,alternative_1,0 1 1 1,A | B,0,1,1,primitive,A=0,C=1,False,,
+15_alternative_1,15_alternative_1|0|1|B,15,alternative_1,0 1 1 1,A | B,0,1,1,primitive,B=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR A B)
+  V (literals):
+    lit<¬A>
+  N (defaults):
+    lit<A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007CDCD03}>
+15_alternative_1,15_alternative_1|1|0|A,15,alternative_1,0 1 1 1,A | B,1,0,1,primitive,A=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR A B)
+  V (literals):
+    lit<¬B>
+  N (defaults):
+    lit<¬A>, lit<B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007D08C13}>
+15_alternative_1,15_alternative_1|1|0|B,15,alternative_1,0 1 1 1,A | B,1,0,1,primitive,B=0,C=1,False,,
+15_alternative_1,15_alternative_1|1|1|A,15,alternative_1,0 1 1 1,A | B,1,1,1,primitive,A=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR A B)
+  V (literals):
+    
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007D48123}>
+15_alternative_1,15_alternative_1|1|1|B,15,alternative_1,0 1 1 1,A | B,1,1,1,primitive,B=1,C=1,True,"
+Extended FDM Model - NIL
+  M (equations):
+    C: (OR A B)
+  V (literals):
+    
+  N (defaults):
+    lit<¬A>, lit<¬B>, lit<¬C>",#<INFERENTIAL-NETWORK {8007D6B8E3}>
+16_alternative_1,16_alternative_1|0|0|A,16,alternative_1,1 1 1 1,True,0,0,1,primitive,A=0,C=1,False,,
+16_alternative_1,16_alternative_1|0|0|B,16,alternative_1,1 1 1 1,True,0,0,1,primitive,B=0,C=1,False,,
+16_alternative_1,16_alternative_1|0|1|A,16,alternative_1,1 1 1 1,True,0,1,1,primitive,A=0,C=1,False,,
+16_alternative_1,16_alternative_1|0|1|B,16,alternative_1,1 1 1 1,True,0,1,1,primitive,B=1,C=1,False,,
+16_alternative_1,16_alternative_1|1|0|A,16,alternative_1,1 1 1 1,True,1,0,1,primitive,A=1,C=1,False,,
+16_alternative_1,16_alternative_1|1|0|B,16,alternative_1,1 1 1 1,True,1,0,1,primitive,B=0,C=1,False,,
+16_alternative_1,16_alternative_1|1|1|A,16,alternative_1,1 1 1 1,True,1,1,1,primitive,A=1,C=1,False,,
+16_alternative_1,16_alternative_1|1|1|B,16,alternative_1,1 1 1 1,True,1,1,1,primitive,B=1,C=1,False,,

@@ -1,13 +1,4 @@
-"""Evaluate the generated SEMs with the repository's HP15 implementation.
-
-For every model and every binary context (A, B), this evaluates:
-
-    A=a is a cause of C=c
-    B=b is a cause of C=c
-    A=a and B=b is a conjunctive cause of C=c
-
-where ``a``, ``b``, and ``c`` are the values in that context.
-"""
+"""Evaluate primitive and conjunctive causes in generated SEMs with HP15."""
 
 from __future__ import annotations
 
@@ -15,7 +6,9 @@ import argparse
 import csv
 import sys
 from pathlib import Path
-from typing import Dict, Iterable, List
+from typing import Iterable
+
+from sem_evaluation import equation_as_python, iter_cases
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent
@@ -28,18 +21,8 @@ from src.main import Query, Vignette, check_causality  # noqa: E402
 VARIABLES = ("A", "B", "C")
 
 
-def _equation_as_python(expression: str) -> str:
-    """Translate the SymPy Boolean syntax emitted by generate_data.py."""
-    return (
-        expression.replace("~", " not ")
-        .replace("&", " and ")
-        .replace("|", " or ")
-    )
-
-
 def _make_vignette(model_id: str, expression: str, a: int, b: int) -> Vignette:
-    equation = _equation_as_python(expression)
-    context: Dict[str, int] = {"A": a, "B": b}
+    equation = equation_as_python(expression)
     return Vignette(
         vignette_id=model_id,
         model_id=model_id,
@@ -50,64 +33,30 @@ def _make_vignette(model_id: str, expression: str, a: int, b: int) -> Vignette:
         values={"A": a, "B": b, "C": None},
         default_values={variable: [0] for variable in VARIABLES},
         equations={"C": equation},
-        context=context,
+        context={"A": a, "B": b},
     )
 
 
-def _evaluate_rows(input_path: Path) -> Iterable[Dict[str, object]]:
-    with input_path.open(newline="") as csv_file:
-        reader = csv.DictReader(csv_file)
-        required = {"id", "truth_table", "C"}
-        missing = required - set(reader.fieldnames or ())
-        if missing:
-            raise ValueError(f"{input_path} is missing required columns: {sorted(missing)}")
-
-        occurrences: Dict[str, int] = {}
-        for row in reader:
-            logical_model_id = str(row["id"])
-            occurrence = occurrences.get(logical_model_id, 0)
-            occurrences[logical_model_id] = occurrence + 1
-            representation = "canonical" if occurrence == 0 else f"alternative_{occurrence}"
-            model_id = f"{logical_model_id}_{representation}"
-            expression = row["C"]
-            for a in (0, 1):
-                for b in (0, 1):
-                    vignette = _make_vignette(model_id, expression, a, b)
-                    c = vignette.values_in_example["C"]
-                    candidate_causes = [
-                        (f"A={a}", "primitive"),
-                        (f"B={b}", "primitive"),
-                        (f"A={a} and B={b}", "conjunction"),
-                    ]
-                    for cause, cause_type in candidate_causes:
-                        query = Query(
-                            v_id=model_id,
-                            cause=cause,
-                            effect=f"C={c}",
-                            query_id=f"{model_id}_{a}{b}_{cause_type}",
-                        )
-                        result = check_causality(
-                            theory="HP2015",
-                            vignette=vignette,
-                            query=query,
-                            gt="HP15",
-                        )
-                        yield {
-                            "model_id": model_id,
-                            "logical_model_id": logical_model_id,
-                            "representation": representation,
-                            "truth_table": row["truth_table"],
-                            "equation": expression,
-                            "A": a,
-                            "B": b,
-                            "C": c,
-                            "cause_type": cause_type,
-                            "cause": query.cause,
-                            "effect": query.effect,
-                            "hp15_result": result.result,
-                            "witness": result.witness or "",
-                            "details": result.details or "",
-                        }
+def _evaluate_rows(input_path: Path) -> Iterable[dict[str, object]]:
+    for case in iter_cases(input_path, include_conjunction=True):
+        vignette = _make_vignette(
+            case["model_id"], case["equation"], case["A"], case["B"]
+        )
+        query = Query(
+            v_id=case["model_id"],
+            cause=case["cause"],
+            effect=case["effect"],
+            query_id=case["query_id"],
+        )
+        result = check_causality(
+            theory="HP2015", vignette=vignette, query=query, gt="HP15"
+        )
+        yield {
+            **case,
+            "hp15_result": result.result,
+            "witness": result.witness or "",
+            "details": result.details or "",
+        }
 
 
 def main() -> None:
@@ -116,20 +65,21 @@ def main() -> None:
         "input",
         nargs="?",
         type=Path,
-        default=PROJECT_ROOT / "sem_models_combined.csv",
+        default=PROJECT_ROOT / "data" / "sem_models_combined.csv",
         help="CSV generated by generate_data.py",
     )
     parser.add_argument(
         "-o",
         "--output",
         type=Path,
-        default=PROJECT_ROOT / "sem_models_hp15_results.csv",
+        default=PROJECT_ROOT / "results" / "hp15_results.csv",
         help="Output CSV path",
     )
     args = parser.parse_args()
 
     rows = list(_evaluate_rows(args.input))
-    fieldnames: List[str] = list(rows[0]) if rows else []
+    fieldnames = list(rows[0]) if rows else []
+    args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", newline="") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         writer.writeheader()
