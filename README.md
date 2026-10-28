@@ -31,6 +31,13 @@ python evaluate_sem_models_hp15.py
 python sanity_check_hp15_results.py
 ```
 
+`generate_data2.py` enumerates singleton and miniterm clauses, including the
+true-valued term `T`, and writes all 512 combinations to
+`data/sem_models2.csv` using the original `id`, `representation`, `truth_table`,
+and `C` columns. It uses `data/sem_models.csv` to mark exactly one matching
+formula per truth table as `canonical`; the remaining formulas are
+`alternative_1`. It refuses to replace an existing output CSV.
+
 FDM additionally requires SBCL and the Moonli/Quicklisp environment loaded by
 `.lisp/setup.lisp`.
 
@@ -41,6 +48,29 @@ python sanity_check_hp15_results.py results/fdm_results.csv
 
 The current FDM results contain eight disagreements between logically equivalent
 representations; its sanity check reports them and exits with status 1.
+
+Compare the saved HP15 and FDM results using only the Python standard library:
+
+```bash
+python compare_sem_results.py
+python compare_sem_results.py --disagreements-csv results/hp15_fdm_disagreements.csv
+python compare_sem_results.py --participation-disagreements-csv results/hp15_fdm_participation_disagreements.csv
+```
+
+The report matches primitive queries by ID, checks that their metadata and
+coverage agree, and shows verdict counts, individual disagreements, representation
+sensitivity, and the corresponding HP15 conjunction verdicts. It also compares
+FDM against HP15 causal participation: a literal is a cause or part of a cause
+when its primitive verdict or the conjunction verdict is true. Missing
+conjunction evidence leaves participation unknown when the primitive is false;
+these queries are excluded from the participation comparison.
+
+In the current results, all 16 primitive disagreements resolve under this
+interpretation. Participation agreement is 192/200 (96%), with eight remaining
+disagreements involving canonical equations whose FDM verdicts change after
+simplification. Use `--hp15 PATH` and `--fdm PATH` to compare other result files.
+Differences between theories are reported normally; malformed or unmatched
+inputs produce an error.
 
 ## Data and results
 
@@ -55,6 +85,6 @@ witnesses, and diagnostics. Matching primitive queries share IDs across theories
 ## Tests
 
 ```bash
-python -m unittest test_sem_evaluation test_evaluate_sem_models_hp15 test_evaluate_sem_models_fdm
+python -m unittest test_sem_evaluation test_evaluate_sem_models_hp15 test_evaluate_sem_models_fdm test_compare_sem_results
 sbcl --script test_fdm_regressions.lisp
 ```

@@ -1,3 +1,6 @@
+"""This script generates possible SEMs by enumerating all possible combinations of miniterms, and the simplified version of each SEM.""" 
+"""generate_data2.py also generates SEMs by also enumerating singletons in addition to miniterms."""
+
 import csv
 from itertools import product
 from pathlib import Path
@@ -30,7 +33,7 @@ with (DATA_DIR / "sem_models.csv").open("w", newline="") as f_canon, \
 
         canon_writer.writerow([k + 1, "canonical", truth_table, dnf])
         if simplified != dnf:
-            simp_writer.writerow([k + 1, "alternative_1", truth_table, simplified])
+            simp_writer.writerow([k + 1, "alternative", truth_table, simplified])
 
 # Combine canonical and simplified models into one CSV
 with (DATA_DIR / "sem_models_combined.csv").open("w", newline="") as f_out:
